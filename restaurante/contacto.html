@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Adrián Pulido Párraga">
+  <meta name="description" content="Formulario para contactar con Delicias Pulido">
+  <meta name="keywords" content="contacto, restaurante, Delicias Pulido, formulario">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Delicias Pulido</title>
+</head>
+<body>
+  <header>
+    <h1>Envíenos su mensaje</h1>
+    <p>Contacto con Delicias Pulido</p>
+  </header>
+  <nav aria-label="Navegación">
+    <a href="index.html">Volver al menú principal del restaurante</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../index.html">Volver al inicio</a>
+  </nav>
+  <main>
+    <form>
+      <fieldset>
+        <legend>Datos de contacto</legend>
+        <div class="campos">
+          <div class="campo">
+            <label for="nombre">Su nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="correo">Su correo electrónico</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" required>
+          </div>
+          <div class="campo">
+            <label for="telefono">Su teléfono</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel">
+          </div>
+          <div class="campo ancho-completo">
+            <label for="asunto">Asunto</label>
+            <input id="asunto" name="asunto" type="text" required>
+          </div>
+          <div class="campo ancho-completo">
+            <label for="mensaje">Su mensaje (máximo 500 caracteres)</label>
+            <textarea id="mensaje" name="mensaje" maxlength="500" required></textarea>
+          </div>
+        </div>
+      </fieldset>
+      <div class="acciones"><button type="submit">Enviar</button></div>
+    </form>
+  </main>
+  <footer><p>Delicias Pulido</p></footer>
+</body>
+</html>

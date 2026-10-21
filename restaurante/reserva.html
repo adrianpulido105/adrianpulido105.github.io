@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Adrián Pulido Párraga">
+  <meta name="description" content="Formulario para solicitar una reserva en Delicias Pulido">
+  <meta name="keywords" content="reserva, restaurante, Delicias Pulido, formulario">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar una mesa - Delicias Pulido</title>
+</head>
+<body>
+  <header>
+    <h1>Haz una reserva</h1>
+    <p>Delicias Pulido</p>
+  </header>
+  <nav aria-label="Navegación">
+    <a href="index.html">Volver al menú principal del restaurante</a>
+    <span aria-hidden="true"> | </span>
+    <a href="../index.html">Volver al inicio</a>
+  </nav>
+  <main>
+    <form>
+      <fieldset>
+        <legend>Datos de la reserva</legend>
+        <div class="campos">
+          <div class="campo">
+            <label for="nombre">Su nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="clientes">Número de clientes</label>
+            <input id="clientes" name="numero-clientes" type="number" min="1" required>
+          </div>
+          <div class="campo">
+            <label for="correo">Su correo electrónico</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" required>
+          </div>
+          <div class="campo">
+            <label for="telefono">Su teléfono</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="campo">
+            <label for="fecha">Fecha de la reserva</label>
+            <input id="fecha" name="fecha" type="date" required>
+          </div>
+          <div class="campo">
+            <label for="hora">Hora de la reserva</label>
+            <input id="hora" name="hora" type="time" required>
+          </div>
+          <div class="campo ancho-completo">
+            <label for="mensaje">Su mensaje</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+          </div>
+        </div>
+      </fieldset>
+      <div class="acciones"><button type="submit">Solicitar reserva</button></div>
+    </form>
+  </main>
+  <footer><p>Delicias Pulido</p></footer>
+</body>
+</html>

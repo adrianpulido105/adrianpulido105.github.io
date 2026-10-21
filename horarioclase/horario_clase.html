@@ -5,7 +5,19 @@
   <meta name="author" content="Adrián Pulido Párraga">
   <meta name="description" content="Horario semanal de clase">
   <meta name="keywords" content="horario, clase, semana">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horario de clase</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,7 +29,7 @@
   </nav>
 
   <main>
-    <table border="1" style="border-collapse: collapse;">
+    <table>
       <caption>Horario semanal de lunes a viernes</caption>
       <thead>
         <tr>
@@ -85,5 +97,8 @@
       </tbody>
     </table>
   </main>
+  <footer>
+    <p><a href="../index.html">Volver al inicio</a></p>
+  </footer>
 </body>
 </html>

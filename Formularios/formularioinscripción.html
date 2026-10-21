@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Adrián Pulido Párraga">
+  <meta name="description" content="Formulario de inscripción en ciclos formativos de grado superior">
+  <meta name="keywords" content="formulario, inscripción, ciclos formativos, grado superior">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de inscripción</title>
+</head>
+<body>
+  <header>
+    <h1>Hoja de inscripción</h1>
+    <h2>En los ciclos formativos de grado superior</h2>
+  </header>
+
+  <nav aria-label="Navegación">
+    <a href="../index.html">Volver al inicio</a>
+  </nav>
+
+  <main>
+    <form>
+      <fieldset>
+        <legend>Datos personales</legend>
+        <div class="datos-personales">
+          <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="given-name" required>
+          </div>
+          <div class="campo">
+            <label for="apellidos">Apellidos:</label>
+            <input id="apellidos" name="apellidos" type="text" autocomplete="family-name" required>
+          </div>
+          <div class="campo">
+            <label for="dni">DNI:</label>
+            <input id="dni" name="dni" type="text" autocomplete="off" required>
+          </div>
+          <div class="campo">
+            <label for="localidad">Localidad de nacimiento:</label>
+            <input id="localidad" name="localidad" type="text" required>
+          </div>
+          <div class="campo">
+            <label for="provincia">Provincia:</label>
+            <select id="provincia" name="provincia" required>
+              <option value="">Selecciona una provincia</option>
+              <option selected>Huelva</option>
+              <option>Sevilla</option>
+              <option>Cádiz</option>
+              <option>Córdoba</option>
+              <option>Granada</option>
+              <option>Jaén</option>
+              <option>Málaga</option>
+              <option>Almería</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <input id="fecha-nacimiento" name="fecha-nacimiento" type="date" required>
+          </div>
+          <div class="campo ancho-completo">
+            <label for="direccion">Dirección:</label>
+            <input id="direccion" name="direccion" type="text" autocomplete="street-address" required>
+          </div>
+          <div class="campo">
+            <label for="codigo-postal">Código postal:</label>
+            <input id="codigo-postal" name="codigo-postal" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Forma de acceso</legend>
+        <div class="opciones-acceso">
+          <label><input type="radio" name="forma-acceso" value="directo" required> Directo</label>
+          <div class="opcion-directa">
+            <label>
+              <input type="radio" name="modalidad-acceso" value="bachillerato">
+              Bachillerato LOGSE. Modalidad:
+            </label>
+            <input type="text" name="modalidad-bachillerato" aria-label="Modalidad de Bachillerato">
+          </div>
+          <label><input type="radio" name="modalidad-acceso" value="experimental"> Experimental</label>
+          <div class="opcion-directa">
+            <label>
+              <input type="radio" name="modalidad-acceso" value="cou">
+              COU. Opción:
+            </label>
+            <input type="text" name="opcion-cou" aria-label="Opción de COU">
+          </div>
+          <label><input type="radio" name="modalidad-acceso" value="fp2"> FP2</label>
+          <div class="opcion-directa">
+            <label>
+              <input type="radio" name="modalidad-acceso" value="otros">
+              Otros (especifique):
+            </label>
+            <input type="text" name="otros-acceso" aria-label="Especifique otra forma de acceso">
+          </div>
+          <label><input type="radio" name="forma-acceso" value="prueba-libre"> Prueba libre</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Documentos adjuntados</legend>
+        <div class="documentos">
+          <label><input type="checkbox" name="documentos" value="fotocopia-dni"> Fotocopia del DNI</label>
+          <label><input type="checkbox" name="documentos" value="certificado-academico"> Certificado académico</label>
+          <div class="campo">
+            <label for="otros-documentos">Otros documentos (especifique):</label>
+            <input id="otros-documentos" name="otros-documentos" type="text">
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="acciones">
+        <button type="submit">Enviar solicitud</button>
+        <button type="reset">Limpiar datos</button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <p><a href="index.html">Volver al índice de formularios</a></p>
+  </footer>
+</body>
+</html>
