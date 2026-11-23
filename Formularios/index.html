@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Adrián Pulido Párraga">
-  <meta name="description" content="Índice de formularios de inscripción y del club de informática">
+  <meta name="description" content="Formularios de inscripción y del club de informática">
   <meta name="keywords" content="formularios, inscripción, informática, club">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formularios</title>
+  <link rel="icon" type="image/png" href="../fotos/Desarrollo%20Web%20en%20Ambiente%20Tech.png">
+  <title>Formularios de inscripción y del club</title>
 </head>
 <body>
   <header>
@@ -18,14 +19,204 @@
   </nav>
 
   <main>
-    <ul>
-      <li><a href="formularioinscripción.html">Formulario de inscripción</a></li>
-      <li><a href="formularioclubinformatica.html">Formulario del club de informática</a></li>
-    </ul>
+    <section>
+      <h2>Hoja de inscripción</h2>
+      <h3>En los ciclos formativos de grado superior</h3>
+      <form>
+        <fieldset>
+          <legend>Datos personales</legend>
+          <div class="datos-personales">
+            <div class="campo">
+              <label for="nombre">Nombre:</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="given-name" required>
+            </div>
+            <div class="campo">
+              <label for="apellidos">Apellidos:</label>
+              <input id="apellidos" name="apellidos" type="text" autocomplete="family-name" required>
+            </div>
+            <div class="campo">
+              <label for="dni">DNI:</label>
+              <input id="dni" name="dni" type="text" autocomplete="off" required>
+            </div>
+            <div class="campo">
+              <label for="localidad">Localidad de nacimiento:</label>
+              <input id="localidad" name="localidad" type="text" required>
+            </div>
+            <div class="campo">
+              <label for="provincia">Provincia:</label>
+              <select id="provincia" name="provincia" required>
+                <option value="">Selecciona una provincia</option>
+                <option selected>Huelva</option>
+                <option>Sevilla</option>
+                <option>Cádiz</option>
+                <option>Córdoba</option>
+                <option>Granada</option>
+                <option>Jaén</option>
+                <option>Málaga</option>
+                <option>Almería</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+              <input id="fecha-nacimiento" name="fecha-nacimiento" type="date" required>
+            </div>
+            <div class="campo ancho-completo">
+              <label for="direccion">Dirección:</label>
+              <input id="direccion" name="direccion" type="text" autocomplete="street-address" required>
+            </div>
+            <div class="campo">
+              <label for="codigo-postal">Código postal:</label>
+              <input id="codigo-postal" name="codigo-postal" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Forma de acceso</legend>
+          <div class="opciones-acceso">
+            <label><input type="radio" name="forma-acceso" value="directo" required> Directo</label>
+            <div class="opcion-directa">
+              <label>
+                <input type="radio" name="modalidad-acceso" value="bachillerato">
+                Bachillerato LOGSE. Modalidad:
+              </label>
+              <input type="text" name="modalidad-bachillerato" aria-label="Modalidad de Bachillerato">
+            </div>
+            <label><input type="radio" name="modalidad-acceso" value="experimental"> Experimental</label>
+            <div class="opcion-directa">
+              <label>
+                <input type="radio" name="modalidad-acceso" value="cou">
+                COU. Opción:
+              </label>
+              <input type="text" name="opcion-cou" aria-label="Opción de COU">
+            </div>
+            <label><input type="radio" name="modalidad-acceso" value="fp2"> FP2</label>
+            <div class="opcion-directa">
+              <label>
+                <input type="radio" name="modalidad-acceso" value="otros">
+                Otros (especifique):
+              </label>
+              <input type="text" name="otros-acceso" aria-label="Especifique otra forma de acceso">
+            </div>
+            <label><input type="radio" name="forma-acceso" value="prueba-libre"> Prueba libre</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Documentos adjuntados</legend>
+          <div class="documentos">
+            <label><input type="checkbox" name="documentos" value="fotocopia-dni"> Fotocopia del DNI</label>
+            <label><input type="checkbox" name="documentos" value="certificado-academico"> Certificado académico</label>
+            <div class="campo">
+              <label for="otros-documentos">Otros documentos (especifique):</label>
+              <input id="otros-documentos" name="otros-documentos" type="text">
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="acciones">
+          <button type="submit">Enviar solicitud</button>
+          <button type="reset">Limpiar datos</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Club «Amigos de la informática»</h2>
+      <p>Rellena el siguiente cuestionario para formar parte del club.</p>
+      <form>
+        <fieldset>
+          <legend>Datos personales</legend>
+          <div class="datos-personales">
+            <label for="club-nombre">Nombre:</label>
+            <input class="campo" id="club-nombre" name="nombre" type="text" autocomplete="name">
+
+            <label for="domicilio">Domicilio:</label>
+            <input class="campo" id="domicilio" name="domicilio" type="text" placeholder="Calle, número y localidad" autocomplete="street-address">
+
+            <label for="pais">País de origen:</label>
+            <select class="campo" id="pais" name="pais">
+              <option selected>España</option>
+              <option>Argentina</option>
+              <option>Colombia</option>
+              <option>Francia</option>
+              <option>México</option>
+              <option>Perú</option>
+              <option>Otro</option>
+            </select>
+
+            <label for="club-fecha-nacimiento">Fecha de nacimiento:</label>
+            <input class="campo" id="club-fecha-nacimiento" name="fecha-nacimiento" type="date">
+
+            <label for="correo">Correo electrónico:</label>
+            <input class="campo" id="correo" name="correo" type="email" autocomplete="email">
+
+            <label for="telefono">Teléfono:</label>
+            <input class="campo" id="telefono" name="telefono" type="tel" autocomplete="tel">
+
+            <span>Estado civil:</span>
+            <div class="opciones-en-linea">
+              <label><input type="radio" name="estado-civil" value="soltero"> Soltero/a</label>
+              <label><input type="radio" name="estado-civil" value="casado"> Casado/a</label>
+              <label><input type="radio" name="estado-civil" value="separado"> Separado/a</label>
+              <label><input type="radio" name="estado-civil" value="viudo"> Viudo/a</label>
+            </div>
+
+            <span>Sexo:</span>
+            <div class="opciones-en-linea">
+              <label><input type="radio" name="sexo" value="hombre"> Hombre</label>
+              <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Otra información de interés</legend>
+          <div class="informacion-interes">
+            <div>
+              <label for="componentes">Seleccione los componentes electrónicos con los que habitualmente trabaja:</label>
+              <select class="componentes" id="componentes" name="componentes" multiple size="4">
+                <option>Móvil</option>
+                <option>Tablet</option>
+                <option>Ordenador</option>
+                <option>Ebook</option>
+              </select>
+            </div>
+
+            <div>
+              <p>Seleccione tus actividades favoritas:</p>
+              <div class="actividades">
+                <label><input type="checkbox" name="actividades" value="deporte"> Hacer deporte</label>
+                <label><input type="checkbox" name="actividades" value="amigos"> Salir con mis amigos</label>
+                <label><input type="checkbox" name="actividades" value="series"> Ver series, pelis...</label>
+                <label><input type="checkbox" name="actividades" value="senderismo"> Realizar rutas de senderismo</label>
+                <label><input type="checkbox" name="actividades" value="cine"> Ir al cine</label>
+                <label><input type="checkbox" name="actividades" value="musica"> Escuchar música</label>
+              </div>
+            </div>
+
+            <div class="motivo">
+              <label for="motivo">Explique brevemente el motivo por el que desea ingresar en nuestro club:</label>
+              <textarea id="motivo" name="motivo"></textarea>
+            </div>
+
+            <div class="pelicula">
+              <label for="pelicula">Elige o escribe tu película favorita:</label>
+              <input id="pelicula" name="pelicula" type="text">
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="acciones">
+          <button type="submit">Enviar</button>
+          <button type="reset">Cancelar</button>
+        </div>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <p>Índice de formularios</p>
+    <p>Formularios</p>
   </footer>
 </body>
 </html>

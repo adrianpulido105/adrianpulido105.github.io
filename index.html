@@ -6,27 +6,33 @@
   <meta name="description" content="Página principal con enlaces al restaurante, horarios y formularios">
   <meta name="keywords" content="inicio, restaurante, horario, formularios">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="fotos/Desarrollo%20Web%20en%20Ambiente%20Tech.png">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Inicio - Adrián Pulido</title>
 </head>
 <body>
-  <header>
-    <h1>Adrián Pulido Párraga 2º TSMR</h1>
+  <header class="cabecera">
+    <h1 id="nombre-alumno">Adrián Pulido Párraga 2º TSMR</h1>
   </header>
 
-  <nav aria-label="Menú principal">
+  <nav class="navegacion" aria-label="Menú principal">
     <ul>
       <li><a href="restaurante/index.html">Restaurante</a></li>
-      <li><a href="horarioclase/horario_clase.html">Horario de clase</a></li>
-      <li><a href="restaurante/horario/index.html">Horario del restaurante</a></li>
+      <li><a href="horarioclase/index.html">Horario de clase</a></li>
+      <li><a href="restaurante/horario.html">Horario del restaurante</a></li>
       <li><a href="Formularios/index.html">Formularios</a></li>
     </ul>
   </nav>
 
-  <main>
-    <p>Bienvenido. Selecciona una sección del menú principal.</p>
+  <main class="contenido">
+    <section class="tarjeta-bienvenida">
+      <h2>Bienvenido</h2>
+      <p>Selecciona una sección del menú principal para explorar mis trabajos.</p>
+      <img class="imagen-presentacion" src="fotos/Desarrollo%20Web%20en%20Ambiente%20Tech.png" alt="Desarrollo web y programación en 2.º TSMR">
+    </section>
   </main>
 
-  <footer>
+  <footer class="pie">
     <p>Adrián Pulido Párraga</p>
   </footer>
 </body>

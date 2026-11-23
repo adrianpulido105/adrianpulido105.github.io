@@ -1,0 +1,415 @@
+/* Restablece los elementos y prepara el diseño general. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Organiza la página y define sus colores y letra. */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid rgb(75, 72, 62);
+  background: rgb(241, 241, 241);
+  color: rgb(35, 44, 54);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Da a la cabecera y al pie un fondo amarillo claro. */
+.cabecera,
+.pie {
+  padding: 0.65rem 1rem;
+  background: rgb(235, 219, 164);
+  text-align: center;
+}
+
+/* Aplica un degradado discreto al nombre del alumno. */
+#nombre-alumno {
+  background: linear-gradient(90deg, oklch(38% 0.055 75), oklch(45% 0.065 82));
+  background-clip: text;
+  font-size: 1.15rem;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Estiliza la navegación y ordena sus enlaces. */
+.navegacion {
+  padding: 0.45rem;
+  background: rgb(184, 164, 108);
+  text-align: center;
+}
+
+/* Coloca los enlaces del menú en una fila. */
+.navegacion ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+}
+
+/* Da formato a los enlaces de navegación y del pie. */
+.navegacion a,
+.pie a {
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+/* Subraya los enlaces al pasar el cursor o enfocarlos. */
+.navegacion a:hover,
+.navegacion a:focus-visible,
+.pie a:hover,
+.pie a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Centra el contenido y deja espacio para el pie. */
+.contenido {
+  width: min(90%, 43rem);
+  flex: 1;
+  margin: 1rem auto;
+}
+
+/* Presenta el contenido en una tarjeta blanca. */
+.tarjeta-bienvenida,
+.tarjeta-horario {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  text-align: center;
+}
+
+/* Da formato a los títulos y al texto de bienvenida. */
+.tarjeta-bienvenida h2,
+.tarjeta-horario h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Separa el texto y la imagen de presentación. */
+.tarjeta-bienvenida p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Ajusta la imagen del inicio al ancho de su tarjeta. */
+.imagen-presentacion {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Coloca el pie abajo y mantiene el tono amarillo. */
+.pie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  color: rgb(117, 88, 42);
+  font-size: 0.8rem;
+}
+
+/* Ajusta el tamaño y los márgenes del horario. */
+.contenido-horario {
+  width: 92%;
+  max-width: 88rem;
+  margin: 1.4rem auto 1.25rem;
+}
+
+/* Permite desplazar la tabla en pantallas estrechas. */
+.tabla-desplazable {
+  overflow-x: auto;
+}
+
+/* Alinea la tabla y dibuja su cuadrícula. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Resalta el título de la tabla. */
+caption {
+  padding-bottom: 0.45rem;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Añade bordes y espacio interior a las celdas. */
+th,
+td {
+  border: 1px solid rgb(192, 181, 155);
+  padding: 0.5rem 0.4rem;
+}
+
+/* Distingue las horas y los encabezados de los días. */
+.pagina-horario thead th,
+.pagina-horario tbody th {
+  background: rgb(245, 239, 222);
+}
+
+/* Color de SOR. */
+.modulo-sor { background: rgb(238, 210, 145); }
+/* Color de AP. */
+.modulo-ap { background: rgb(255, 198, 148); }
+/* Color de SR. */
+.modulo-sr { background: rgb(207, 183, 222); }
+/* Color de AW. */
+.modulo-aw { background: rgb(222, 205, 162); }
+/* Color de SI. */
+.modulo-si { background: rgb(255, 190, 143); }
+/* Color de ODWP. */
+.modulo-odwp { background: rgb(180, 214, 174); }
+/* Color de Inglés. */
+.modulo-ingles { background: rgb(239, 224, 145); }
+/* Color de PI. */
+.modulo-pi { background: rgb(245, 222, 153); }
+/* Color de IPE II. */
+.modulo-ipe { background: rgb(222, 207, 166); }
+/* Color del recreo. */
+.modulo-recreo { background: rgb(238, 210, 126); font-weight: 700; }
+
+/* Ajusta la cabecera del horario. */
+.cabecera-horario { padding: 0.65rem 0.5rem 0.45rem; }
+/* Destaca el título del horario. */
+.cabecera-horario h1 { margin-bottom: 0.35rem; color: rgb(63, 53, 34); font-size: 1.6rem; }
+/* Muestra el nombre en una banda amarilla con degradado. */
+.cabecera-horario #nombre-alumno {
+  padding: 0.25rem;
+  background: linear-gradient(90deg, oklch(91% 0.08 92), oklch(85% 0.1 88));
+  color: rgb(63, 53, 34);
+  font-size: 0.85rem;
+  -webkit-text-fill-color: currentColor;
+}
+
+/* Da al horario un fondo blanco cálido. */
+.pagina-horario { background: rgb(255, 253, 248); }
+/* Ajusta la barra de navegación del horario. */
+.navegacion-horario { padding: 0.45rem; }
+/* Quita la tarjeta blanca alrededor de la tabla. */
+.tarjeta-horario { padding: 0; background: transparent; box-shadow: none; }
+/* Da al pie del horario un fondo amarillo claro. */
+.pie-horario { background: rgb(245, 222, 163); }
+/* Mantiene visible el enlace del pie. */
+.pie-horario a { color: rgb(0, 0, 180); text-decoration: underline; }
+
+/* Reduce los márgenes en pantallas pequeñas. */
+@media (max-width: 600px) {
+  /* Da más espacio al contenido en móviles. */
+  .contenido { width: 94%; margin: 1rem auto; }
+  /* Aprovecha el ancho de la pantalla para la tabla. */
+  .contenido-horario { width: 98%; }
+}
+
+/* Estilos sencillos para las páginas del restaurante. */
+.pagina-restaurante {
+  border-top-color: rgb(75, 72, 62);
+  background: rgb(255, 253, 248);
+}
+
+.cabecera-restaurante {
+  padding: 1rem;
+  background: rgb(235, 219, 164);
+  color: rgb(63, 53, 34);
+}
+
+.cabecera-restaurante p {
+  margin-top: 0.4rem;
+  color: rgb(117, 88, 42);
+}
+
+.navegacion-restaurante {
+  padding: 0.6rem;
+  background: rgb(184, 164, 108);
+  text-align: center;
+}
+
+.navegacion-restaurante ul {
+  gap: 0.5rem 1.25rem;
+}
+
+.navegacion-restaurante a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.navegacion-restaurante a:hover,
+.navegacion-restaurante a:focus {
+  text-decoration: underline;
+}
+
+.contenido-restaurante {
+  width: 92%;
+  max-width: 68rem;
+  margin: 1.25rem auto;
+}
+
+.pagina-restaurante h2 {
+  margin-bottom: 0.6rem;
+  color: rgb(63, 53, 34);
+}
+
+.tarjeta-restaurante {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+.tarjeta-restaurante p {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+.tarjeta-restaurante a {
+  color: rgb(117, 78, 20);
+}
+
+.imagen-restaurante,
+.imagen-plato {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+.imagen-restaurante {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.imagen-plato {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.lista-platos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+}
+
+.lista-platos li {
+  flex: 1 1 13rem;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  background: rgb(245, 239, 222);
+}
+
+.tarjeta-horario-restaurante {
+  overflow-x: auto;
+}
+
+.pagina-restaurante table caption {
+  padding: 0.3rem 0 0.6rem;
+  color: rgb(63, 53, 34);
+}
+
+.pagina-restaurante table thead th,
+.pagina-restaurante table tbody th,
+.pagina-restaurante table tfoot th {
+  background: rgb(245, 239, 222);
+}
+
+.pagina-restaurante form {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+.pagina-restaurante fieldset {
+  padding: 0.8rem;
+  border: 1px solid rgb(192, 181, 155);
+  border-radius: 0.3rem;
+}
+
+.pagina-restaurante legend {
+  padding: 0 0.3rem;
+  color: rgb(63, 53, 34);
+  font-weight: 700;
+}
+
+.pagina-restaurante .campos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pagina-restaurante .campo {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin-bottom: 0.8rem;
+}
+
+.pagina-restaurante .ancho-completo {
+  width: 100%;
+}
+
+.pagina-restaurante input,
+.pagina-restaurante select,
+.pagina-restaurante textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(166, 153, 123);
+  border-radius: 0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.pagina-restaurante textarea {
+  height: 8rem;
+  resize: vertical;
+}
+
+.pagina-restaurante .acciones {
+  margin-top: 0.8rem;
+  text-align: right;
+}
+
+.pagina-restaurante button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background: rgb(117, 88, 42);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pagina-restaurante button:hover,
+.pagina-restaurante button:focus {
+  background: rgb(85, 63, 29);
+}
+
+.pie-restaurante {
+  background: rgb(245, 222, 163);
+  color: rgb(117, 88, 42);
+  text-align: center;
+}
+
+.pie-restaurante a {
+  color: rgb(117, 78, 20);
+}
+
+@media (max-width: 600px) {
+  .pagina-restaurante .campo {
+    width: 100%;
+  }
+
+  .pagina-restaurante button {
+    width: 100%;
+  }
+}
