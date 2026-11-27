@@ -1,158 +1,43 @@
 /* Restablece los elementos y prepara el diseño general. */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+* { box-sizing: border-box; margin: 0; padding: 0; }
 /* Organiza la página y define sus colores y letra. */
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  border-top: 3px solid rgb(75, 72, 62);
-  background: rgb(241, 241, 241);
-  color: rgb(35, 44, 54);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+body { min-height: 100vh; display: flex; flex-direction: column; border-top: 3px solid rgb(75, 72, 62); background: rgb(241, 241, 241); color: rgb(35, 44, 54); font-family: Arial, Helvetica, sans-serif; }
 /* Da a la cabecera y al pie un fondo amarillo claro. */
-.cabecera,
-.pie {
-  padding: 0.65rem 1rem;
-  background: rgb(235, 219, 164);
-  text-align: center;
-}
-
+.cabecera, .pie { padding: 0.65rem 1rem; background: rgb(235, 219, 164); text-align: center; }
 /* Aplica un degradado discreto al nombre del alumno. */
-#nombre-alumno {
-  background: linear-gradient(90deg, oklch(38% 0.055 75), oklch(45% 0.065 82));
-  background-clip: text;
-  font-size: 1.15rem;
-  -webkit-text-fill-color: transparent;
-}
-
+#nombre-alumno { background: linear-gradient(90deg, oklch(38% 0.055 75), oklch(45% 0.065 82)); background-clip: text; font-size: 1.15rem; -webkit-text-fill-color: transparent; }
 /* Estiliza la navegación y ordena sus enlaces. */
-.navegacion {
-  padding: 0.45rem;
-  background: rgb(184, 164, 108);
-  text-align: center;
-}
-
+.navegacion { padding: 0.45rem; background: rgb(184, 164, 108); text-align: center; }
 /* Coloca los enlaces del menú en una fila. */
-.navegacion ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 1.25rem;
-  list-style: none;
-}
-
+.navegacion ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.25rem; list-style: none; }
 /* Da formato a los enlaces de navegación y del pie. */
-.navegacion a,
-.pie a {
-  color: rgb(255, 255, 255);
-  font-size: 0.8rem;
-  text-decoration: none;
-}
-
+.navegacion a, .pie a { color: rgb(255, 255, 255); font-size: 0.8rem; text-decoration: none; }
 /* Subraya los enlaces al pasar el cursor o enfocarlos. */
-.navegacion a:hover,
-.navegacion a:focus-visible,
-.pie a:hover,
-.pie a:focus-visible {
-  text-decoration: underline;
-}
-
+.navegacion a:hover, .navegacion a:focus-visible, .pie a:hover, .pie a:focus-visible { text-decoration: underline; }
 /* Centra el contenido y deja espacio para el pie. */
-.contenido {
-  width: min(90%, 43rem);
-  flex: 1;
-  margin: 1rem auto;
-}
-
+.contenido { width: min(90%, 43rem); flex: 1; margin: 1rem auto; }
 /* Presenta el contenido en una tarjeta blanca. */
-.tarjeta-bienvenida,
-.tarjeta-horario {
-  padding: 1rem;
-  border-radius: 0.4rem;
-  background: rgb(255, 255, 255);
-  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
-  text-align: center;
-}
-
+.tarjeta-bienvenida, .tarjeta-horario { padding: 1rem; border-radius: 0.4rem; background: rgb(255, 255, 255); box-shadow: 0 2px 8px rgb(0 0 0 / 12%); text-align: center; }
 /* Da formato a los títulos y al texto de bienvenida. */
-.tarjeta-bienvenida h2,
-.tarjeta-horario h2 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-
+.tarjeta-bienvenida h2, .tarjeta-horario h2 { margin-bottom: 0.5rem; font-size: 1.2rem; }
 /* Separa el texto y la imagen de presentación. */
-.tarjeta-bienvenida p {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
+.tarjeta-bienvenida p { margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.5; }
 /* Ajusta la imagen del inicio al ancho de su tarjeta. */
-.imagen-presentacion {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
+.imagen-presentacion { display: block; width: 100%; height: auto; margin: 0 auto; }
 /* Coloca el pie abajo y mantiene el tono amarillo. */
-.pie {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 1.5rem;
-  color: rgb(117, 88, 42);
-  font-size: 0.8rem;
-}
-
+.pie { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; color: rgb(117, 88, 42); font-size: 0.8rem; }
 /* Ajusta el tamaño y los márgenes del horario. */
-.contenido-horario {
-  width: 92%;
-  max-width: 88rem;
-  margin: 1.4rem auto 1.25rem;
-}
-
+.contenido-horario { width: 92%; max-width: 88rem; margin: 1.4rem auto 1.25rem; }
 /* Permite desplazar la tabla en pantallas estrechas. */
-.tabla-desplazable {
-  overflow-x: auto;
-}
-
+.tabla-desplazable { overflow-x: auto; }
 /* Alinea la tabla y dibuja su cuadrícula. */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
+table { width: 100%; border-collapse: collapse; text-align: center; }
 /* Resalta el título de la tabla. */
-caption {
-  padding-bottom: 0.45rem;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: 700;
-}
-
+caption { padding-bottom: 0.45rem; font-size: 1rem; font-style: italic; font-weight: 700; }
 /* Añade bordes y espacio interior a las celdas. */
-th,
-td {
-  border: 1px solid rgb(192, 181, 155);
-  padding: 0.5rem 0.4rem;
-}
-
+th, td { border: 1px solid rgb(192, 181, 155); padding: 0.5rem 0.4rem; }
 /* Distingue las horas y los encabezados de los días. */
-.pagina-horario thead th,
-.pagina-horario tbody th {
-  background: rgb(245, 239, 222);
-}
-
+.pagina-horario thead th, .pagina-horario tbody th { background: rgb(245, 239, 222); }
 /* Color de SOR. */
 .modulo-sor { background: rgb(238, 210, 145); }
 /* Color de AP. */
@@ -173,20 +58,12 @@ td {
 .modulo-ipe { background: rgb(222, 207, 166); }
 /* Color del recreo. */
 .modulo-recreo { background: rgb(238, 210, 126); font-weight: 700; }
-
 /* Ajusta la cabecera del horario. */
 .cabecera-horario { padding: 0.65rem 0.5rem 0.45rem; }
 /* Destaca el título del horario. */
 .cabecera-horario h1 { margin-bottom: 0.35rem; color: rgb(63, 53, 34); font-size: 1.6rem; }
 /* Muestra el nombre en una banda amarilla con degradado. */
-.cabecera-horario #nombre-alumno {
-  padding: 0.25rem;
-  background: linear-gradient(90deg, oklch(91% 0.08 92), oklch(85% 0.1 88));
-  color: rgb(63, 53, 34);
-  font-size: 0.85rem;
-  -webkit-text-fill-color: currentColor;
-}
-
+.cabecera-horario #nombre-alumno { padding: 0.25rem; background: linear-gradient(90deg, oklch(91% 0.08 92), oklch(85% 0.1 88)); color: rgb(63, 53, 34); font-size: 0.85rem; -webkit-text-fill-color: currentColor; }
 /* Da al horario un fondo blanco cálido. */
 .pagina-horario { background: rgb(255, 253, 248); }
 /* Ajusta la barra de navegación del horario. */
@@ -197,7 +74,6 @@ td {
 .pie-horario { background: rgb(245, 222, 163); }
 /* Mantiene visible el enlace del pie. */
 .pie-horario a { color: rgb(0, 0, 180); text-decoration: underline; }
-
 /* Reduce los márgenes en pantallas pequeñas. */
 @media (max-width: 600px) {
   /* Da más espacio al contenido en móviles. */
@@ -205,211 +81,163 @@ td {
   /* Aprovecha el ancho de la pantalla para la tabla. */
   .contenido-horario { width: 98%; }
 }
-
 /* Estilos sencillos para las páginas del restaurante. */
-.pagina-restaurante {
-  border-top-color: rgb(75, 72, 62);
-  background: rgb(255, 253, 248);
-}
-
-.cabecera-restaurante {
-  padding: 1rem;
-  background: rgb(235, 219, 164);
-  color: rgb(63, 53, 34);
-}
-
-.cabecera-restaurante p {
-  margin-top: 0.4rem;
-  color: rgb(117, 88, 42);
-}
-
-.navegacion-restaurante {
-  padding: 0.6rem;
-  background: rgb(184, 164, 108);
-  text-align: center;
-}
-
-.navegacion-restaurante ul {
-  gap: 0.5rem 1.25rem;
-}
-
-.navegacion-restaurante a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-
-.navegacion-restaurante a:hover,
-.navegacion-restaurante a:focus {
-  text-decoration: underline;
-}
-
-.contenido-restaurante {
-  width: 92%;
-  max-width: 68rem;
-  margin: 1.25rem auto;
-}
-
-.pagina-restaurante h2 {
-  margin-bottom: 0.6rem;
-  color: rgb(63, 53, 34);
-}
-
-.tarjeta-restaurante {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 0.4rem;
-  background: rgb(255, 255, 255);
-  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
-}
-
-.tarjeta-restaurante p {
-  margin-bottom: 0.6rem;
-  line-height: 1.5;
-}
-
-.tarjeta-restaurante a {
-  color: rgb(117, 78, 20);
-}
-
-.imagen-restaurante,
-.imagen-plato {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 0.3rem;
-}
-
-.imagen-restaurante {
-  max-width: 100%;
-  margin: 1rem 0;
-}
-
-.imagen-plato {
-  max-width: 100%;
-  margin-bottom: 1rem;
-}
-
-.lista-platos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  list-style: none;
-}
-
-.lista-platos li {
-  flex: 1 1 13rem;
-  padding: 0.7rem;
-  border-radius: 0.3rem;
-  background: rgb(245, 239, 222);
-}
-
-.tarjeta-horario-restaurante {
-  overflow-x: auto;
-}
-
-.pagina-restaurante table caption {
-  padding: 0.3rem 0 0.6rem;
-  color: rgb(63, 53, 34);
-}
-
-.pagina-restaurante table thead th,
-.pagina-restaurante table tbody th,
-.pagina-restaurante table tfoot th {
-  background: rgb(245, 239, 222);
-}
-
-.pagina-restaurante form {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 1rem;
-  border-radius: 0.4rem;
-  background: rgb(255, 255, 255);
-  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
-}
-
-.pagina-restaurante fieldset {
-  padding: 0.8rem;
-  border: 1px solid rgb(192, 181, 155);
-  border-radius: 0.3rem;
-}
-
-.pagina-restaurante legend {
-  padding: 0 0.3rem;
-  color: rgb(63, 53, 34);
-  font-weight: 700;
-}
-
-.pagina-restaurante .campos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.pagina-restaurante .campo {
-  display: flex;
-  flex-direction: column;
-  width: 48%;
-  margin-bottom: 0.8rem;
-}
-
-.pagina-restaurante .ancho-completo {
-  width: 100%;
-}
-
-.pagina-restaurante input,
-.pagina-restaurante select,
-.pagina-restaurante textarea {
-  width: 100%;
-  margin-top: 0.3rem;
-  padding: 0.5rem;
-  border: 1px solid rgb(166, 153, 123);
-  border-radius: 0.2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-}
-
-.pagina-restaurante textarea {
-  height: 8rem;
-  resize: vertical;
-}
-
-.pagina-restaurante .acciones {
-  margin-top: 0.8rem;
-  text-align: right;
-}
-
-.pagina-restaurante button {
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 0.3rem;
-  background: rgb(117, 88, 42);
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.pagina-restaurante button:hover,
-.pagina-restaurante button:focus {
-  background: rgb(85, 63, 29);
-}
-
-.pie-restaurante {
-  background: rgb(245, 222, 163);
-  color: rgb(117, 88, 42);
-  text-align: center;
-}
-
-.pie-restaurante a {
-  color: rgb(117, 78, 20);
-}
-
+.pagina-restaurante { border-top-color: rgb(75, 72, 62); background: rgb(255, 253, 248); }
+/* Presenta la cabecera del restaurante con el tono común del sitio. */
+.cabecera-restaurante { padding: 1rem; background: rgb(235, 219, 164); color: rgb(63, 53, 34); }
+/* Diferencia el texto secundario de la cabecera del restaurante. */
+.cabecera-restaurante p { margin-top: 0.4rem; color: rgb(117, 88, 42); }
+/* Da contraste a la barra de navegación del restaurante. */
+.navegacion-restaurante { padding: 0.6rem; background: rgb(184, 164, 108); text-align: center; }
+/* Separa los enlaces del menú del restaurante. */
+.navegacion-restaurante ul { gap: 0.5rem 1.25rem; }
+/* Mantiene visibles los enlaces de navegación. */
+.navegacion-restaurante a { color: rgb(255, 255, 255); text-decoration: none; }
+/* Subraya los enlaces del menú al interactuar con ellos. */
+.navegacion-restaurante a:hover, .navegacion-restaurante a:focus { text-decoration: underline; }
+/* Centra el contenido del restaurante y limita su anchura. */
+.contenido-restaurante { width: 92%; max-width: 68rem; margin: 1.25rem auto; }
+/* Destaca los títulos de las páginas del restaurante. */
+.pagina-restaurante h2 { margin-bottom: 0.6rem; color: rgb(63, 53, 34); }
+/* Enmarca los bloques de contenido del restaurante. */
+.tarjeta-restaurante { margin-bottom: 1rem; padding: 1rem; border-radius: 0.4rem; background: rgb(255, 255, 255); box-shadow: 0 2px 8px rgb(0 0 0 / 12%); }
+/* Mejora la lectura de los párrafos de las tarjetas. */
+.tarjeta-restaurante p { margin-bottom: 0.6rem; line-height: 1.5; }
+/* Da un color cálido a los enlaces de las tarjetas. */
+.tarjeta-restaurante a { color: rgb(117, 78, 20); }
+/* Ajusta el tamaño y los bordes de las imágenes del restaurante. */
+.imagen-restaurante, .imagen-plato { display: block; width: 100%; height: auto; border-radius: 0.3rem; }
+/* Separa la imagen principal del texto cercano. */
+.imagen-restaurante { max-width: 100%; margin: 1rem 0; }
+/* Separa la imagen de cada plato de su descripción. */
+.imagen-plato { max-width: 100%; margin-bottom: 1rem; }
+/* Distribuye las opciones del menú en una lista flexible. */
+.lista-platos { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; }
+/* Presenta cada plato como una tarjeta breve. */
+.lista-platos li { flex: 1 1 13rem; padding: 0.7rem; border-radius: 0.3rem; background: rgb(245, 239, 222); }
+/* Permite desplazar la tabla del restaurante en pantallas estrechas. */
+.tarjeta-horario-restaurante { overflow-x: auto; }
+/* Resalta el título de la tabla del restaurante. */
+.pagina-restaurante table caption { padding: 0.3rem 0 0.6rem; color: rgb(63, 53, 34); }
+/* Distingue los encabezados de las tablas del restaurante. */
+.pagina-restaurante table thead th, .pagina-restaurante table tbody th, .pagina-restaurante table tfoot th { background: rgb(245, 239, 222); }
+/* Enmarca los formularios propios del restaurante. */
+.pagina-restaurante form { max-width: 48rem; margin: 0 auto; padding: 1rem; border-radius: 0.4rem; background: rgb(255, 255, 255); box-shadow: 0 2px 8px rgb(0 0 0 / 12%); }
+/* Delimita los grupos de campos del restaurante. */
+.pagina-restaurante fieldset { padding: 0.8rem; border: 1px solid rgb(192, 181, 155); border-radius: 0.3rem; }
+/* Da énfasis a los títulos de los grupos de campos. */
+.pagina-restaurante legend { padding: 0 0.3rem; color: rgb(63, 53, 34); font-weight: 700; }
+/* Ordena los campos del formulario en filas adaptables. */
+.pagina-restaurante .campos { display: flex; flex-wrap: wrap; justify-content: space-between; }
+/* Apila cada etiqueta sobre su control. */
+.pagina-restaurante .campo { display: flex; flex-direction: column; width: 48%; margin-bottom: 0.8rem; }
+/* Permite que un campo ocupe el ancho completo del formulario. */
+.pagina-restaurante .ancho-completo { width: 100%; }
+/* Unifica el aspecto de los controles del restaurante. */
+/* Unifica el aspecto de los controles del restaurante. */
+.pagina-restaurante input, .pagina-restaurante select, .pagina-restaurante textarea { width: 100%; margin-top: 0.3rem; padding: 0.5rem; border: 1px solid rgb(166, 153, 123); border-radius: 0.2rem; font-family: Arial, Helvetica, sans-serif; font-size: 1rem; }
+/* Da altura suficiente a las áreas de texto. */
+.pagina-restaurante textarea { height: 8rem; resize: vertical; }
+/* Alinea las acciones al final del formulario. */
+.pagina-restaurante .acciones { margin-top: 0.8rem; text-align: right; }
+/* Da un estilo destacado a los botones del restaurante. */
+.pagina-restaurante button { padding: 0.6rem 1rem; border: none; border-radius: 0.3rem; background: rgb(117, 88, 42); color: rgb(255, 255, 255); font-size: 1rem; font-weight: 700; cursor: pointer; }
+/* Oscurece los botones cuando reciben interacción. */
+.pagina-restaurante button:hover, .pagina-restaurante button:focus { background: rgb(85, 63, 29); }
+/* Mantiene el pie del restaurante dentro de la paleta dorada. */
+.pie-restaurante { background: rgb(245, 222, 163); color: rgb(117, 88, 42); text-align: center; }
+/* Hace reconocibles los enlaces del pie del restaurante. */
+.pie-restaurante a { color: rgb(117, 78, 20); }
+/* Adapta los formularios del restaurante a las pantallas pequeñas. */
 @media (max-width: 600px) {
-  .pagina-restaurante .campo {
-    width: 100%;
-  }
-
-  .pagina-restaurante button {
-    width: 100%;
-  }
+  /* Usa todo el ancho para cada campo en móviles. */
+  .pagina-restaurante .campo { width: 100%; }
+  /* Facilita pulsar los botones del restaurante en móviles. */
+  .pagina-restaurante button { width: 100%; }
+}
+/* Aplica el fondo claro de la web a las páginas de formularios. */
+.pagina-formularios { background: rgb(255, 253, 248); }
+/* Usa el mismo color amarillo en la cabecera. */
+.cabecera-formularios { padding: 1rem; background: rgb(235, 219, 164); color: rgb(63, 53, 34); }
+/* Pinta la navegación en dorado y centra los enlaces. */
+.navegacion-formularios { padding: 0.6rem; background: rgb(184, 164, 108); text-align: center; }
+/* Coloca los enlaces de navegación en una fila adaptable. */
+.navegacion-formularios ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; list-style: none; }
+/* Da contraste a los enlaces de navegación. */
+.navegacion-formularios a { color: white; text-decoration: none; }
+/* Centra el contenido y deja espacio alrededor. */
+.contenido-formularios { width: 94%; max-width: 900px; margin: 1.5rem auto; }
+/* Separa las secciones del índice de formularios. */
+.seccion-formulario { margin-bottom: 1.5rem; }
+/* Colorea y separa los títulos de sección. */
+.seccion-formulario h2, .seccion-formulario h3 { margin-bottom: 0.7rem; color: rgb(98, 72, 34); }
+/* Centra y distingue el subtítulo de inscripción. */
+.seccion-formulario h3 { text-align: center; text-transform: uppercase; }
+/* Da espacio al texto de introducción del club. */
+.seccion-formulario > p { margin-bottom: 0.7rem; }
+/* Presenta cada formulario como una tarjeta clara. */
+.formulario { margin: 0 auto; padding: 1rem; border: 1px solid rgb(220, 199, 144); border-radius: 0.7rem; background: rgb(255, 250, 234); box-shadow: 0 3px 8px rgb(117 88 42 / 16%); }
+/* Separa los grupos y aplica un borde dorado. */
+.formulario fieldset { margin-bottom: 0.8rem; padding: 0.8rem; border: 1px solid rgb(192, 164, 101); border-radius: 0.4rem; }
+/* Resalta los títulos de cada grupo. */
+.formulario legend { padding: 0 0.3rem; color: rgb(98, 72, 34); font-weight: bold; }
+/* Da un tono gris cálido al bloque de datos personales. */
+.formulario-inscripcion fieldset:nth-of-type(1) { background: rgb(207, 204, 198); }
+/* Usa un tono melocotón para las formas de acceso. */
+.formulario-inscripcion fieldset:nth-of-type(2) { background: rgb(242, 190, 150); }
+/* Resalta los documentos con un tono rosado apagado. */
+.formulario-inscripcion fieldset:nth-of-type(3) { background: rgb(190, 133, 137); }
+/* Ordena los datos de inscripción en tres columnas. */
+.formulario-inscripcion .datos-personales { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
+/* Coloca las etiquetas encima de sus campos. */
+.formulario-inscripcion .campo { display: flex; flex-direction: column; gap: 0.2rem; }
+/* Hace que la dirección use todo el ancho. */
+.formulario-inscripcion .ancho-completo { grid-column: 1 / -1; }
+/* Ordena las opciones de acceso. */
+.opciones-acceso { display: grid; gap: 0.3rem; }
+/* Indenta las opciones que pertenecen al acceso directo. */
+.opcion-directa { display: flex; flex-wrap: wrap; gap: 0.3rem; padding-left: 1rem; }
+/* Separa las casillas de documentos. */
+.documentos { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+/* Alinea los datos personales del club en dos columnas. */
+.formulario-club .datos-personales { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 0.5rem; }
+/* Destaca las etiquetas personales del club. */
+.formulario-club .datos-personales > label, .formulario-club .datos-personales > span { color: rgb(83, 63, 34); font-weight: bold; text-align: right; }
+/* Da un tono dorado al bloque personal del club. */
+.formulario-club fieldset:nth-of-type(1) { background: rgb(205, 158, 75); }
+/* Usa un amarillo anaranjado para la información de interés. */
+.formulario-club fieldset:nth-of-type(2) { background: rgb(250, 192, 82); }
+/* Separa los apartados de información de interés. */
+.informacion-interes { display: grid; gap: 0.8rem; }
+/* Coloca las actividades en tres columnas. */
+.actividades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+/* Apila la pregunta y su área de texto. */
+.motivo { display: grid; gap: 0.3rem; }
+/* Permite ajustar la altura del área de texto. */
+.formulario textarea { min-height: 6rem; resize: vertical; }
+/* Da un aspecto uniforme a los campos de entrada. */
+.formulario input:not([type="radio"]):not([type="checkbox"]), .formulario select, .formulario textarea { width: 100%; padding: 0.45rem; border: 1px solid rgb(166, 145, 98); border-radius: 0.3rem; font: inherit; }
+/* Evita que el selector de dispositivos quede demasiado estrecho. */
+.formulario-club .componentes { width: auto; min-width: 9rem; }
+/* Centra los botones y permite que salten de línea. */
+.formulario .acciones { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; margin-top: 1rem; }
+/* Da color y forma a los botones. */
+.formulario button { min-width: 9rem; padding: 0.6rem 1rem; border: 0; border-radius: 1.5rem; background: rgb(98, 72, 34); color: white; font: inherit; cursor: pointer; }
+/* Oscurece los botones al pasar el cursor. */
+.formulario button:hover { background: rgb(70, 52, 25); }
+/* Mantiene el pie en la paleta amarilla. */
+.pie-formularios { background: rgb(245, 222, 163); color: rgb(117, 88, 42); text-align: center; }
+/* Ajusta los campos para pantallas pequeñas. */
+@media (max-width: 600px) {
+  /* Usa dos columnas en los datos de inscripción y actividades. */
+  .formulario-inscripcion .datos-personales, .actividades { grid-template-columns: repeat(2, 1fr); }
+  /* Apila los datos del club y alinea sus etiquetas a la izquierda. */
+  .formulario-club .datos-personales { grid-template-columns: 1fr; }
+  /* Alinea a la izquierda las etiquetas del club en móviles. */
+  .formulario-club .datos-personales > label, .formulario-club .datos-personales > span { text-align: left; }
+}
+/* Muestra los formularios en una columna en móviles estrechos. */
+@media (max-width: 400px) {
+  /* Deja una sola columna para que los campos quepan en pantalla. */
+  .formulario-inscripcion .datos-personales, .actividades { grid-template-columns: 1fr; }
 }

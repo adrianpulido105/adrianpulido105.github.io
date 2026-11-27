@@ -7,22 +7,27 @@
   <meta name="keywords" content="formularios, inscripción, informática, club">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../fotos/Desarrollo%20Web%20en%20Ambiente%20Tech.png">
+  <link rel="stylesheet" href="../css/styles.css">
   <title>Formularios de inscripción y del club</title>
 </head>
-<body>
-  <header>
+<body class="pagina-formularios">
+  <header class="cabecera cabecera-formularios">
     <h1>Formularios</h1>
   </header>
 
-  <nav aria-label="Navegación">
-    <a href="../index.html">Volver al inicio</a>
+  <nav class="navegacion navegacion-formularios" aria-label="Navegación">
+    <ul>
+      <li><a href="../index.html">Volver al inicio</a></li>
+      <li><a href="formularioinscripción.html">Hoja de inscripción</a></li>
+      <li><a href="formularioclubinformatica.html">Club de informática</a></li>
+    </ul>
   </nav>
 
-  <main>
-    <section>
+  <main class="contenido contenido-formularios">
+    <section class="seccion-formulario">
       <h2>Hoja de inscripción</h2>
       <h3>En los ciclos formativos de grado superior</h3>
-      <form>
+      <form class="formulario formulario-inscripcion">
         <fieldset>
           <legend>Datos personales</legend>
           <div class="datos-personales">
@@ -82,7 +87,9 @@
               </label>
               <input type="text" name="modalidad-bachillerato" aria-label="Modalidad de Bachillerato">
             </div>
-            <label><input type="radio" name="modalidad-acceso" value="experimental"> Experimental</label>
+            <div class="opcion-directa">
+              <label><input type="radio" name="modalidad-acceso" value="experimental"> Experimental</label>
+            </div>
             <div class="opcion-directa">
               <label>
                 <input type="radio" name="modalidad-acceso" value="cou">
@@ -90,7 +97,9 @@
               </label>
               <input type="text" name="opcion-cou" aria-label="Opción de COU">
             </div>
-            <label><input type="radio" name="modalidad-acceso" value="fp2"> FP2</label>
+            <div class="opcion-directa">
+              <label><input type="radio" name="modalidad-acceso" value="fp2"> FP2</label>
+            </div>
             <div class="opcion-directa">
               <label>
                 <input type="radio" name="modalidad-acceso" value="otros">
@@ -121,10 +130,10 @@
       </form>
     </section>
 
-    <section>
+    <section class="seccion-formulario">
       <h2>Club «Amigos de la informática»</h2>
       <p>Rellena el siguiente cuestionario para formar parte del club.</p>
-      <form>
+      <form class="formulario formulario-club">
         <fieldset>
           <legend>Datos personales</legend>
           <div class="datos-personales">
@@ -215,7 +224,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="pie pie-formularios">
     <p>Formularios</p>
   </footer>
 </body>

@@ -6,20 +6,25 @@
   <meta name="description" content="Formulario de inscripción en ciclos formativos de grado superior">
   <meta name="keywords" content="formulario, inscripción, ciclos formativos, grado superior">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
   <title>Formulario de inscripción</title>
 </head>
-<body>
-  <header>
+<body class="pagina-formularios">
+  <header class="cabecera cabecera-formularios">
     <h1>Hoja de inscripción</h1>
     <h2>En los ciclos formativos de grado superior</h2>
   </header>
 
-  <nav aria-label="Navegación">
-    <a href="../index.html">Volver al inicio</a>
+  <nav class="navegacion navegacion-formularios" aria-label="Navegación">
+    <ul>
+      <li><a href="index.html">Índice de formularios</a></li>
+      <li><a href="formularioclubinformatica.html">Club de informática</a></li>
+      <li><a href="../index.html">Volver al inicio</a></li>
+    </ul>
   </nav>
 
-  <main>
-    <form>
+  <main class="contenido contenido-formularios">
+    <form class="formulario formulario-inscripcion">
       <fieldset>
         <legend>Datos personales</legend>
         <div class="datos-personales">
@@ -79,7 +84,9 @@
             </label>
             <input type="text" name="modalidad-bachillerato" aria-label="Modalidad de Bachillerato">
           </div>
-          <label><input type="radio" name="modalidad-acceso" value="experimental"> Experimental</label>
+          <div class="opcion-directa">
+            <label><input type="radio" name="modalidad-acceso" value="experimental"> Experimental</label>
+          </div>
           <div class="opcion-directa">
             <label>
               <input type="radio" name="modalidad-acceso" value="cou">
@@ -87,7 +94,9 @@
             </label>
             <input type="text" name="opcion-cou" aria-label="Opción de COU">
           </div>
-          <label><input type="radio" name="modalidad-acceso" value="fp2"> FP2</label>
+          <div class="opcion-directa">
+            <label><input type="radio" name="modalidad-acceso" value="fp2"> FP2</label>
+          </div>
           <div class="opcion-directa">
             <label>
               <input type="radio" name="modalidad-acceso" value="otros">
